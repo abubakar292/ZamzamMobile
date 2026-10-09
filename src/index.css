@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #F8FAF9;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+  }
+  :root {
+    --color-primary: #1B4332;
+    --color-primary-light: #2D6A4F;
+    --color-accent: #10B981;
+    --color-gold: #F59E0B;
+    --sidebar-width: 260px;
+    --navbar-height: 64px;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #D1FAE5; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #6EE7B7; }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    background: linear-gradient(90deg, #f0f7f4 25%, #dcfce7 50%, #f0f7f4 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+  .text-gradient-green {
+    background: linear-gradient(135deg, #1B4332, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass-card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(27,67,50,0.12);
+  }
+}
